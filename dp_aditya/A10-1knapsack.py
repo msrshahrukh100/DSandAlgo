@@ -29,10 +29,10 @@ def find_max_profit_dp(weight, cost, max_weight, n):
             if weight[i-1] <= j:
                 cache[i][j] = max(
                     cost[i-1] + cache[i-1][j-weight[i-1]],
-                    cache[i-1][j-weight[i-1]]
+                    cache[i-1][j]
                 )
             else:
-                cache[i][j] = cache[i-1][j-weight[i-1]]
+                cache[i][j] = cache[i-1][j]
 
     return cache[n][max_weight]
     
