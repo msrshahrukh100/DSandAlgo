@@ -1,3 +1,5 @@
+# ps - given a list of arr find the maximum in a given window size for all windows
+
 queue = [-sys.maxsize]
 
 arr = []

@@ -1,3 +1,6 @@
+# ps - of all substrings of length k find the first negative number
+
+
 queue = []
 
 arr = []

@@ -1,4 +1,4 @@
-
+# ps = given a string count all occurrences of an anagrams of a given word
 
 from collections import defaultdict
 pattern = ""

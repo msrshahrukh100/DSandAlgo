@@ -1,4 +1,4 @@
-
+# ps - find the maximum sum possible with a given window size
 import sys
 
 answer = -sys.maxsize
