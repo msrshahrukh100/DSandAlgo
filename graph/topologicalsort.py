@@ -36,7 +36,7 @@ class Graph:
         
         # insert it at the beginning like stack = [u] + stack
         #  or do stack.insert(0, v)
-        # or print the reverse of stack in final answer
+        # or print the reverse of stack in final answer and use append
         stack.insert(0, u) 
 
     def topological_sort(self, stack, u):
