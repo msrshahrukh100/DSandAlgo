@@ -30,6 +30,14 @@ def print_lcsupersequence():
                 longest_common_subsequence += s1[j-1]
                 j -= 1
 
+    while i > 0:
+        longest_common_subsequence += s1[i-1]
+        i -= 1
+
+    while j > 0:
+        longest_common_subsequence += s2[j-1]
+        j -= 1
+
     print(longest_common_subsequence[::-1])
 
 
