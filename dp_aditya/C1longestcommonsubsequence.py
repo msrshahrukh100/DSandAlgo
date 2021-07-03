@@ -32,11 +32,33 @@ def lcs_dp(s1, s2):
                     cache[i][j-1]
                 )
 
+    def print_lcs():
+        '''
+            Prints the longest common subsequence
+        '''
+        i = n
+        j = m
+        longest_common_subsequence = ""
+        while i > 0 and j > 0:
+            if s1[i-1] == s2[j-1]:
+                longest_common_subsequence += s2[i-1]
+                i -= 1
+                j -= 1
+            else:
+                if cache[i-1][j] > cache[i][j-1]:
+                    i -= 1
+                else:
+                    j -= 1
+
+        print(longest_common_subsequence[::-1])
+
+    print_lcs()
+
     return cache[n][m]
 
 
 s1 = "abcdgh"
 s2 = "abedfhr"
 
-print(lcs(s1, s2, len(s1), len(s2)))
+# print(lcs(s1, s2, len(s1), len(s2)))
 print(lcs_dp(s1, s2))

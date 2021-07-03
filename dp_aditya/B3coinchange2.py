@@ -1,5 +1,6 @@
 # find minimum number of coins requred to make the sum
 # we have infinite supply of coins
+# only question where we have to initialize row[1]  as well
 
 import sys
 
