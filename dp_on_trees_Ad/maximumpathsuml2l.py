@@ -4,18 +4,20 @@ import sys
 
 res = -sys.maxsize
 
+
 def solve(root):
-	global res
-	if not root:
-		return 0
+    global res
+    if not root:
+        return 0
 
-	l = solve(root.left)
-	r = solve(root.right)
+    l = solve(root.left)
+    r = solve(root.right)
 
-	temp = max(l, r) + root.val
+    temp = max(max(l, r) + root.val, root.val)
 
-	ans = max(temp, l + r + root.val)   # considering both cases when root constitutes the answer and when not
+    # considering both cases when root constitutes the answer and when not
+    ans = max(temp, l + r + root.val)
 
-	res = max(res, ans)
+    res = max(res, ans)
 
-	return temp
+    return temp
