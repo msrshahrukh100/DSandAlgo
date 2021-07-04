@@ -46,10 +46,10 @@ while j < len(s):
         if count == 0:
             answer.append(s[i:j])
 
-        if i in freq:
-            if freq[i] == 0:
+        if s[i] in freq:
+            if freq[s[i]] == 0:
                 count += 1
-            freq[i] += 1
+            freq[s[i]] += 1
 
         i += 1
 
