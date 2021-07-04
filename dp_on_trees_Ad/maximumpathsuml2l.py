@@ -13,7 +13,7 @@ def solve(root):
     l = solve(root.left)
     r = solve(root.right)
 
-    temp = max(max(l, r) + root.val, root.val)
+    temp = max(l, r) + root.val
 
     # considering both cases when root constitutes the answer and when not
     ans = max(temp, l + r + root.val)
